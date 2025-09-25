@@ -21,8 +21,8 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          source: "Backend/*"
-          target: "/srv/falzar/backups/"
+          source: "backend/*"
+          target: "/srv/falzar/"
 
       # Déploiement du frontend
       - name: Copy Frontend to Azure VM
@@ -31,8 +31,8 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          source: "Frontend/*"
-          target: "/srv/falzar/frontend/"
+          source: "frontend/*"
+          target: "/srv/falzar/"
 
       # Restart containers
       - name: Restart containers
