@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Random</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      .random-box {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        padding: 40px 60px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 25px;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 5px;
+        background: #fcb69f;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #ffecd2;
+        color: #fcb69f;
+      }
+      .random-number {
+        font-size: 2em;
+        margin-top: 20px;
+        color: #fcb69f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="random-box">
+      <h1>Générateur de nombre aléatoire</h1>
+      <button onclick="generateRandom()">Générer</button>
+      <div class="random-number" id="randomNumber"></div>
+    </div>
+    <script>
+      function generateRandom() {
+        const num = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("randomNumber").textContent = num;
+      }
+    </script>
+  </body>
+</html>
