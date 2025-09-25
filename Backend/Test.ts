@@ -37,3 +37,99 @@ app.get('/ping', (req, res) => {
 app.listen(port, () => {
     console.log(`API running at http://localhost:${port}`);
 });
+app.get('/', (req, res) => {
+    res.send('Hello from Falzar API!');
+});
+
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/', (req, res) => {
+    res.send('Hello from Falzar API!');
+});
+
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/', (req, res) => {
+    res.send('Hello from Falzar API!');
+});
+
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
+app.get('/ping', (req, res) => {
+    res.json({ message: 'pong' });
+});
+
+app.listen(port, () => {
+    console.log(`API running at http://localhost:${port}`);
+});
