@@ -1,9 +1,9 @@
-name: Deploy to Azure VM
+name: Deploy Front & Back
 
 on:
   push:
     branches:
-      - main # déploie à chaque push sur main
+      - dev
 
 jobs:
   deploy:
@@ -13,22 +13,33 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Copy files to VM via SSH
+      # Déploiement du backend
+      - name: Copy Backend to Azure VM
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          passphrase: ${{ secrets.VM_SSH_PASSPHRASE }}
-          source: "."
-          target: "/var/www/html"
+          source: "Backend/*"
+          target: "/srv/falzar/backups/"
 
-      - name: Restart Apache (if needed)
+      # Déploiement du frontend
+      - name: Copy Frontend to Azure VM
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          source: "Frontend/*"
+          target: "/srv/falzar/frontend/"
+
+      # Restart containers
+      - name: Restart containers
         uses: appleboy/ssh-action@v0.1.7
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          passphrase: ${{ secrets.VM_SSH_PASSPHRASE }}
           script: |
-            sudo systemctl restart apache2
+            docker restart falzar_api
+            docker restart falzar_caddy
