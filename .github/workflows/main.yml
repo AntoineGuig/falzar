@@ -43,3 +43,4 @@ jobs:
           script: |
             docker restart falzar_api
             docker restart falzar_caddy
+            
