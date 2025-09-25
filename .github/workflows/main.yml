@@ -21,7 +21,7 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          source: "Backend/*"
+          source: "backend/*"
           target: "/srv/falzar/backups/"
 
       # Déploiement du frontend
@@ -31,7 +31,7 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
-          source: "Frontend/*"
+          source: "frontend/*"
           target: "/srv/falzar/frontend/"
 
       # Restart containers
