@@ -24,6 +24,17 @@ jobs:
           source: "backend/*"
           target: "/srv/falzar/"
 
+          # Déploiement du backend
+      - name: Copy Backend to Azure VM
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          source: "frontend/index.html"
+          target: "/srv/falzar/dist"
+          strip_components: 1
+
       # Déploiement du frontend
       - name: Copy Frontend to Azure VM
         uses: appleboy/scp-action@v0.1.7
