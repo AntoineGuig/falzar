@@ -1,7 +1,7 @@
 name: Deploy Front & Back
 
 on:
-
+  workflow_dispatch:
   push:
     branches:
       - dev
