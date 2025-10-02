@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       # Déploiement du backend
-      - name: Copy Backend to Azure VM
+      - name: remplacement Backend CI/CD
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VM_HOST }}
@@ -22,9 +22,17 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           source: "backend/*"
           target: "/srv/falzar/"
-
+      # Déploiement du index.html
+      - name: remplacement index.html CI/CD
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          source: "frontend/index.html"
+          target: "/srv/falzar/dist"
       # Déploiement du frontend
-      - name: Copy Frontend to Azure VM
+      - name: remplacement Frontend CI/CD
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VM_HOST }}
