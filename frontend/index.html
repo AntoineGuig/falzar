@@ -1,118 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/src/style.css" rel="stylesheet">
-  <title>Falzar - Test Tailwind</title>
-</head>
-<body class="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 min-h-screen">
-  <div class="container mx-auto px-4 py-8">
-    <!-- Header -->
-    <header class="text-center mb-12">
-      <h1 class="text-6xl font-bold text-white mb-4 animate-pulse">
-        🚀 Falzar Test
-      </h1>
-      <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-        Démonstration des capacités de Tailwind CSS avec des animations et des composants modernes
-      </p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <title>Falzar - Test Tailwind</title>
+  </head>
+  <body
+    class="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 min-h-screen"
+  >
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header -->
+      <header class="text-center mb-12">
+        <h1 class="text-6xl font-bold text-white mb-4 animate-pulse">
+          🚀 Falzar Test
+        </h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+          Démonstrations des capacités de Tailwind CSS avec des animations et
+          des composants modernes
+        </p>
+      </header>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      <!-- Card 1 -->
-      <div class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:rotate-1">
-        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-4 mx-auto flex items-center justify-center">
-          <span class="text-2xl">🎨</span>
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Card 1 -->
+        <div
+          class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:rotate-1"
+        >
+          <div
+            class="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mb-4 mx-auto flex items-center justify-center"
+          >
+            <span class="text-2xl">🎨</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            Design
+          </h3>
+          <p class="text-gray-600 text-center">
+            Interface moderne avec Tailwind CSS
+          </p>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Design</h3>
-        <p class="text-gray-600 text-center">Interface moderne avec Tailwind CSS</p>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:-rotate-1"
+        >
+          <div
+            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-4 mx-auto flex items-center justify-center"
+          >
+            <span class="text-2xl">⚡</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            Performance
+          </h3>
+          <p class="text-gray-600 text-center">
+            Animations fluides et responsives
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:rotate-1 md:col-span-2 lg:col-span-1"
+        >
+          <div
+            class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-4 mx-auto flex items-center justify-center"
+          >
+            <span class="text-2xl">🔧</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            Développement
+          </h3>
+          <p class="text-gray-600 text-center">
+            Configuration simple et efficace
+          </p>
+        </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:-rotate-1">
-        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-4 mx-auto flex items-center justify-center">
-          <span class="text-2xl">⚡</span>
+      <!-- Interactive Section -->
+      <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">
+          Section Interactive
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Buttons -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Boutons Stylés
+            </h3>
+            <button
+              class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95"
+            >
+              Bouton Principal
+            </button>
+            <button
+              class="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-6 rounded-lg transition-all duration-300"
+            >
+              Bouton Secondaire
+            </button>
+            <button
+              class="w-full bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Bouton Gradient
+            </button>
+          </div>
+
+          <!-- Progress bars -->
+          <div class="space-y-6">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Barres de Progression
+            </h3>
+            <div>
+              <div class="flex justify-between text-white text-sm mb-2">
+                <span>HTML/CSS</span>
+                <span>90%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div
+                  class="bg-gradient-to-r from-blue-500 to-cyan-500 h-3 rounded-full animate-pulse"
+                  style="width: 90%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-white text-sm mb-2">
+                <span>JavaScript</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div
+                  class="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full"
+                  style="width: 75%"
+                ></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-white text-sm mb-2">
+                <span>Vue.js</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-3">
+                <div
+                  class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full"
+                  style="width: 85%"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Performance</h3>
-        <p class="text-gray-600 text-center">Animations fluides et responsives</p>
       </div>
 
-      <!-- Card 3 -->
-      <div class="bg-white rounded-xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 hover:rotate-1 md:col-span-2 lg:col-span-1">
-        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-4 mx-auto flex items-center justify-center">
-          <span class="text-2xl">🔧</span>
+      <!-- Footer -->
+      <footer class="text-center">
+        <div
+          class="inline-flex items-center space-x-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4"
+        >
+          <span class="text-white font-semibold">Fait avec</span>
+          <span class="text-2xl animate-bounce">❤️</span>
+          <span class="text-white font-semibold">et Tailwind CSS</span>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">Développement</h3>
-        <p class="text-gray-600 text-center">Configuration simple et efficace</p>
-      </div>
+      </footer>
     </div>
 
-    <!-- Interactive Section -->
-    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8">
-      <h2 class="text-3xl font-bold text-white mb-6 text-center">Section Interactive</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Buttons -->
-        <div class="space-y-4">
-          <h3 class="text-xl font-semibold text-white mb-4">Boutons Stylés</h3>
-          <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95">
-            Bouton Principal
-          </button>
-          <button class="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-6 rounded-lg transition-all duration-300">
-            Bouton Secondaire
-          </button>
-          <button class="w-full bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Bouton Gradient
-          </button>
-        </div>
-
-        <!-- Progress bars -->
-        <div class="space-y-6">
-          <h3 class="text-xl font-semibold text-white mb-4">Barres de Progression</h3>
-          <div>
-            <div class="flex justify-between text-white text-sm mb-2">
-              <span>HTML/CSS</span>
-              <span>90%</span>
-            </div>
-            <div class="w-full bg-gray-700 rounded-full h-3">
-              <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-3 rounded-full animate-pulse" style="width: 90%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between text-white text-sm mb-2">
-              <span>JavaScript</span>
-              <span>75%</span>
-            </div>
-            <div class="w-full bg-gray-700 rounded-full h-3">
-              <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full" style="width: 75%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between text-white text-sm mb-2">
-              <span>Vue.js</span>
-              <span>85%</span>
-            </div>
-            <div class="w-full bg-gray-700 rounded-full h-3">
-              <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full" style="width: 85%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="text-center">
-      <div class="inline-flex items-center space-x-4 bg-white/20 backdrop-blur-sm rounded-full px-8 py-4">
-        <span class="text-white font-semibold">Fait avec</span>
-        <span class="text-2xl animate-bounce">❤️</span>
-        <span class="text-white font-semibold">et Tailwind CSS</span>
-      </div>
-    </footer>
-  </div>
-
-  <!-- Floating elements -->
-  <div class="fixed top-10 right-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
-  <div class="fixed top-20 right-20 w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
-  <div class="fixed bottom-10 left-10 w-5 h-5 bg-blue-400 rounded-full animate-bounce"></div>
-</body>
+    <!-- Floating elements -->
+    <div
+      class="fixed top-10 right-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping"
+    ></div>
+    <div
+      class="fixed top-20 right-20 w-3 h-3 bg-pink-400 rounded-full animate-pulse"
+    ></div>
+    <div
+      class="fixed bottom-10 left-10 w-5 h-5 bg-blue-400 rounded-full animate-bounce"
+    ></div>
+  </body>
 </html>
